@@ -1,0 +1,25 @@
+-- This is a project file which can be used to load (nearly) all of the
+-- demonstration programs in this directory into Hugs 1.0.
+--
+-- Load into the Hugs interpreter using the command:   :p demoproj.prj
+--                       or from command line using:   hugs + demoproj.prj
+
+utils.hs
+ansi.hs
+commaint.lhs
+evalred.hs
+examples.hs
+iosynch.hs
+lattice.hs
+matrix.hs
+minsrand.hs
+queens.hs
+random.hs
+stack.hs
+temps.hs
+tree.hs
+fastsort.hs
+calendar.hs
+eliza.hs
+arrayEx.hs
+mersenne.hs

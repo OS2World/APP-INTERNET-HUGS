@@ -1,0 +1,15 @@
+#debug all
+option dosseg
+#option map
+option stack=32k
+system dos4g
+name hugs
+file input.obj
+file hugs.obj
+file builtin.obj
+file machine.obj
+file output.obj
+file storage.obj
+file static.obj
+file type.obj
+file compiler.obj

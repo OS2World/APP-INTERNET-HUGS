@@ -1,0 +1,33 @@
+How to install the OS/2 version of HUGS v1.01
+---------------------------------------------
+
+1) Unzip hugs101o.zip. (use Info-unzip, not PKunzip)
+   The file hugs101o.zip already contains the correct directory structure.
+   (\Progs\HUGS)
+
+2) The emx-package must be installed (e.g. the file emx.dll must be in a
+   directory named in the LIBPATH-statement of your CONFIG.SYS)
+   If emx isn't installed yet, get the file emxrt.zip and install the
+   emx-runtime package following the instruction in the readme-file.
+   How to get emxrt.zip:
+     Try ftp://ftp-os2.nmsu.edu
+      or ftp://ftp.uni-stuttgart.de/pub/systems/os2/
+
+3) Edit your CONFIG.SYS (make a copy FIRST!) and add the HUGS-directory to
+   the PATH-statement:
+       SET PATH=...;\Progs\HUGS;...
+   Add the following statements:
+       SET SHELL=\os2\cmd.exe
+       SET HUGS=\Progs\HUGS\hugs.prelude
+     (The variable SHELL must point to the correct location of your OS/2
+      command-interpreter, usually cmd.exe)
+   If you want to use your own editor (HUGS takes tedit.exe as default)
+   specify it by adding the statement:
+       SET EDITOR=\mydirectory\myeditor.exe
+
+4) reboot your system to let the changes take effect.
+
+5) Have fun with your HUGS!
+
+-----
+Michael.Zimmermann@Post.rwth-aachen.de

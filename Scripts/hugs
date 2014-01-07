@@ -1,0 +1,33 @@
+#!/bin/sh
+#
+# A simple shell script to invoke the Hugs interpreter and set the
+# path to the prelude file.
+#
+# Mark P. Jones, 1995.  Derived from the corresponding script for Gofer
+# which was written by Mark Jones and edited by Jonathan Bowen, Oxford
+# University, August 1993.
+
+# Location of Hugs files - site specific
+ROOT=/usr/local/lib/hugs
+
+# The location of your prelude file:
+HUGS=${HUGS-$ROOT/lib/hugs.prelude}
+export HUGS
+
+# Preferred command line argument settings:
+HUGSARGS=${HUGSARGS-""}
+
+# The next few lines try to guess a suitable setting for the EDITLINE
+# variable.  If your favourite editor is not dealt with here, or if
+# the version of sh that I'm using is incompatible with every other
+# shell out there, you may need to modify (or remove) this section:
+#
+EDIT=${VISUAL-${EDITOR-/usr/ucb/vi}}
+case `basename $EDIT` in
+    emacs | vi | elvis )  EDITLINE="$EDIT +%d %s"; export EDITLINE ;;
+    none               )  ;;
+    *                  )  EDITLINE=$EDIT; export EDITLINE ;;
+esac
+
+# Finally, start the interpreter running:
+exec $ROOT/hugs $HUGSARGS $*

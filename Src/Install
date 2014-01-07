@@ -1,0 +1,30 @@
+This package contains the following files and subdirectories:
+
+   1535 Mar  2 05:00 Install         This file
+   3109 Mar  2 05:00 NOTICE          Conditions of use and distribution
+   5631 Mar  2 05:00 Readme          Introductory comments
+   1024 Mar  2 05:00 demos/          Hugs demo programs
+   1077 Mar  2 05:00 hugs            A Unix shell script for starting Hugs
+  63703 Mar  2 05:00 hugs.prelude    The Hugs prelude file
+   1024 Mar  2 05:00 src/            Interpreter source code
+
+The following procedure is suggested for installation of Hugs on a
+Unix machine (see separate files included in the full distribution
+for installation on other machines, for example, PCs).
+
+ 0) Compile the interpreter by editing src/Makefile, selecting the
+    desired operating system/compiler configuration in src/prelude.h
+    and running make.  Not all of the combinations listed in the
+    prelude.h file have been tested recently, so please report any
+    problems and updates to me.
+
+ 1) Choose a directory for the Hugs files to go, say /usr/local/lib/Hugs
+    and copy hugs.prelude and the executable from step (1) into this
+    directory.  Ensure that these files have appropriate permission
+    settings.  If you like, move demos to this subdirectory also.
+
+ 2) Edit the script file `hugs' to point to the directory chosen in
+    step (1) and to set any preferred command line arguments.  Copy
+    this script file into a suitable directory; your own bin directory,
+    for example, or a system wide directory like /usr/local/bin.
+
